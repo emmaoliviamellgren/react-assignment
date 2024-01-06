@@ -2,7 +2,7 @@ import Movie from './Movie';
 
 const MoviesList = ({ movies }) => {
     return (
-        <ul className='divide-y divide-gray-100'>
+        <ul className='mb-2 select-none'>
             {movies.map(movie => {
                 return <Movie movie={movie} key={movie.id}/>
             })}

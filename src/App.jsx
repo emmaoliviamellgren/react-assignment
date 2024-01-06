@@ -50,9 +50,9 @@ function App() {
     return (
         <>
             <Header />
-            <h1 className='px-12 py-6 text-xl font-semibold'>Books</h1>
-            <MoviesList movies={movies} />
             <h1 className='px-12 py-6 text-xl font-semibold'>Movies</h1>
+            <MoviesList movies={movies} />
+            <h1 className='px-12 py-6 text-xl font-semibold'>Books</h1>
             <BooksList books={books} />
         </>
     );

@@ -1,6 +1,16 @@
+import { useState } from 'react';
+
 const Book = ({ book }) => {
+    const [active, setActive] = useState(false);
+
+    const toggleActive = () => {
+        setActive(!active);
+    };
+
     return (
-        <li className='flex px-12 py-4 shadow-md shadow-gray-200'>
+        <li
+            className={`${active ? 'bg-blue-600 shadow-gray-800' : ' shadow-gray-200'} flex px-12 py-4 shadow-md border-b-0`}
+            onClick={toggleActive}>
             <div className='flex justify-between w-full'>
                 <div className='flex flex-col'>
                     <p className='text-sm font-semibold leading-6 text-gray-900'>{book.title}</p>
